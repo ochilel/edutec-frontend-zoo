@@ -1,4 +1,3 @@
-// Modulos
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,11 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
-    // {path, component}
-    {
-        path: 'login',
-        component: LoginComponent
-    }
+	//{path: '', component: HomeComponent},
+	{
+		path: 'login', 
+		component: LoginComponent
+	},
 ];
 
 export const appRoutingProviders: any[] = [];
