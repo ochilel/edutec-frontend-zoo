@@ -1,23 +1,37 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [
+    UserService
+  ]
 })
 export class LoginComponent implements OnInit {
 
-  private textSample = 0;
-  private number1 = 0;
-  private number2 = 0;
+  public user: User;
 
-  constructor() { }
+  constructor(
+    private _userService: UserService,
+  ) { 
+    this.user = new User('', '', '', '', '', '');
+  }
 
   ngOnInit() {
   }
 
-  suma() {
-    this.textSample = this.number1 + this.number2;
+  onSubmit() {
+    this._userService.login(this.user)
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        }
+      );
   }
-
 }
