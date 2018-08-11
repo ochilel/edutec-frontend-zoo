@@ -9,11 +9,17 @@ import { Ng2Webstorage } from 'ngx-webstorage';
 // Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import { AnimalsComponent } from './components/animals/animals.component';
+import { AnimalDetailComponent } from './components/animal-detail/animal-detail.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    AnimalsComponent,
+    AnimalDetailComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
