@@ -19,8 +19,8 @@
 		</p>
 		<p>
 			<label>Apellidos</label>
-			<input type="text" name="surname" #surname="ngModel" [(ngModel)]="user.surname" class="form-control" required />
-			<span *ngIf="!surname.valid && surname.touched">
+			<input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="user.lastname" class="form-control" required />
+			<span *ngIf="!lastname.valid && lastname.touched">
 				Los apellidos son obligatorios
 			</span>
 		</p>
@@ -38,6 +38,6 @@
 				La contraseña no es correcta
 			</span>
 		</p>
-		<input type="submit" value="{{title}}" class="btn btn-primary" [disabled]="!registerForm.form.valid" />
+		<input type="submit" value="Registro" class="btn btn-primary" [disabled]="!registerForm.form.valid" />
 	</form>
 </div>

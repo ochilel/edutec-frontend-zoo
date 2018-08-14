@@ -29,4 +29,22 @@ export class UserService {
             res => res.json()
         );
     }
+
+    register(user) {
+        let params = JSON.stringify(user);
+        console.log(params);
+        let headers = new Headers({
+            'Content-Type': 'application/json'
+        });
+
+        return this._http.post(
+            this.url + 'register',
+            params,
+            {
+                headers: headers
+            }
+        ).map(
+            res => res.json()
+        );
+    }
 }
