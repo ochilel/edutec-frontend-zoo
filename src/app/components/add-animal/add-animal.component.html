@@ -18,14 +18,6 @@
 			</span>
 		</p>
 
-		<p>
-			<label>Año</label>
-			<input type="text" name="year" #year="ngModel" [(ngModel)]="animal.year" class="form-control" required/>
-			<span *ngIf="!year.valid && year.touched">
-				El año es obligatorio
-			</span>
-		</p>
-
 		<div *ngIf="is_edit && animal.image">
 			<div class="image_for_edit">
 				<img src="{{url + 'get-image-animal/' + animal.image }}" />
