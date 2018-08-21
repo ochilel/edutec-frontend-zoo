@@ -1,4 +1,4 @@
-<div class="col-lg-10" [@fadeLateral]>
+<div class="col-lg-10">
 	<h3>{{title}}</h3>
 
 	<form #formAdd="ngForm" (ngSubmit)="onSubmit()">
@@ -29,6 +29,6 @@
 			<input type="file" placeholder="Subir imagen..." (change)="fileChangeEvent($event)"/>
 		</p>
 
-		<input type="submit" value="{{title}}" class="btn btn-success"/>
+		<input type="submit" value="Crear" class="btn btn-success"/>
 	</form>
 </div>
