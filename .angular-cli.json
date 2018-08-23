@@ -21,7 +21,8 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "assets/styles.css"
+        "assets/styles.css",
+        "../node_modules/ngx-simple-modal/styles/simple-modal.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",

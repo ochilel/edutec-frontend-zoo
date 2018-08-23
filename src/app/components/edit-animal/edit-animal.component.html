@@ -1,4 +1,4 @@
-<div class="col-lg-10" *blockUI="'create-animal'">
+<div class="col-lg-10">
 	<h3>{{title}}</h3>
 
 	<form #formAdd="ngForm" (ngSubmit)="onSubmit()">
@@ -16,19 +16,8 @@
 			<span *ngIf="!description.valid && description.touched">
 				La descripción es obligatorio
 			</span>
-		</p>
+    </p>
 
-		<div *ngIf="is_edit && animal.image">
-			<div class="image_for_edit">
-				<img src="{{url + 'get-image-animal/' + animal.image }}" />
-			</div>
-		</div>
-
-		<p>
-			<label>Imagen del animal</label>
-			<input type="file" placeholder="Subir imagen..." (change)="fileChangeEvent($event)"/>
-		</p>
-
-		<input type="submit" value="Crear" class="btn btn-success"/>
+		<input type="submit" value="Guardar" class="btn btn-success"/>
 	</form>
 </div>

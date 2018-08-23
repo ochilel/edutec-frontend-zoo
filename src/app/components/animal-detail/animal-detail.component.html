@@ -6,6 +6,20 @@
 		<h1>{{animal.name}}</h1>
 		<p>{{animal.year}}</p>
 		<p>{{animal.description}}</p>
-		<p>{{animal.origen.state}}, {{animal.origen.country}}</p>
+		<h3><a [routerLink]="['/edit-animal', animal._id]">Editar</a></h3>
+		<button class="btn btn-danger" (click)="showAlert()">Eliminar</button>
+	</div>
+</div>
+
+<div class="modal-content" *ngIf="showModal == true">
+	<div class="modal-header">
+	  <h4>Eliminar animal</h4>
+	</div>
+	<div class="modal-body">
+	  <p>Esta seguro que desea eliminar un animal?</p>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-primary" (click)="deleteAnimal()">Eliminar</button>
+	  <button type="button" class="btn btn-primary" (click)="hideModal()">Cancelar</button>
 	</div>
 </div>
