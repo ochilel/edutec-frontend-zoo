@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2Webstorage } from 'ngx-webstorage';
-import { SimpleModalModule } from 'ngx-simple-modal';
-import { BlockUIModule } from 'ng-block-ui';
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -34,8 +32,6 @@ import { EditAnimalComponent } from './components/edit-animal/edit-animal.compon
     routing,
     BrowserAnimationsModule,
     Ng2Webstorage,
-    SimpleModalModule,
-    BlockUIModule.forRoot(),
   ],
   providers: [
     appRoutingProviders
